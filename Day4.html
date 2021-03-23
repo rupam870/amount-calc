@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Amount calculator</title>
+        <style>
+            .box {
+                background: white;
+                padding: 1em;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+                height: 400px;
+                width: 400px;
+                border-radius: 25px;
+                
+               
+                }
+                button{
+                    background-color: rgb(236, 202, 88);
+                }
+           
+        </style>
+    </head>
+    <body style=background-color:lightgrey>
+        <div class="box" style="margin-left: 30%;">
+        <h1>Amount calculater</h1><br><br><br>
+         <form name="amountcal">
+            <label >Enter Bill Amount :</label><br>
+            <div>$
+            <input type="number" name="bill" placeholder="Bill Amount"><br></div>
+            <br><br>
+            <label >How many people you want to share?</label><br>
+            <input type="number" name="people" placeholder="Number of people">
+          </form>
+          <div class="center">
+              <br><br>
+            <button onclick="displayresult(this)">Calculate</button>
+         </div>
+         <script>
+         function displayresult() {
+             bill=parseInt(amountcal.bill.value);
+             people=parseInt(amountcal.people.value);
+             result=bill/people;
+
+         
+    document.getElementById("demo").innerHTML="Contribution per person = $ " +result;
+    }
+         </script>
+         <p style="text-align:center" id="demo"></p>
+         </div>
+    </body>
+</html>
